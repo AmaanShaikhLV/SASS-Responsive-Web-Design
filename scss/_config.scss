@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Nunito Sans";
+    src: local(""),
+      url("../fonts/nunito-sans-v12-latin-regular.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/nunito-sans-v12-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+$font-stack: "Nunito Sans";
+$font-color: #514d6a;
+$font-weight: bold;
+$primary-font-size: 28px;
+$secondary-font-size: 12px;
+$color: #ffffff;
+
+%flex-property
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin container-info()
+{
+  color: $color;
+  text-align: center;
+  font-weight: $font-weight;
+}

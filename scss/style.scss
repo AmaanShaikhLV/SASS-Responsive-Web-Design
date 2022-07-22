@@ -1,0 +1,141 @@
+@import "config";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+}
+
+body {
+  background-image: url("../images/login-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  position: relative;
+  left: 25px;
+  top: 25px;
+}
+
+.logo-img {
+  content: url("../images/rp-logo.png");
+}
+
+.container {
+  @extend %flex-property;
+  top: 50px;
+  max-width: 100vw;
+}
+
+.title {
+  @include container-info;
+  font-size: $primary-font-size;
+  line-height: 1.2;
+  text-shadow: 0.5px 0px 0.5px $color;
+}
+
+.desc {
+  @include container-info;
+  font-size: $secondary-font-size;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.container-main {
+  @extend %flex-property;
+  top: 85px;
+}
+
+.main {
+  background-color: $color;
+  width: 450px;
+  border-radius: 8px;
+  padding-bottom: 8px;
+}
+
+.main-title {
+  margin: 45px 0px 0px 25px;
+  font-size: 20px;
+  color: $font-color;
+}
+
+.main-label {
+  margin: 30px 0px 0px 25px;
+  font-size: $secondary-font-size;
+}
+
+.main-pass {
+  margin: 13px 0px 0px 25px;
+  font-size: $secondary-font-size;
+}
+
+.main-input {
+  margin: 7px 0px 0px 25px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 5px;
+  width: 80%;
+}
+
+input[type="text"]::placeholder {
+  padding: 10px;
+}
+
+input[type="password"]::placeholder {
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+  accent-color: $color;
+  margin: 12px 0px 0px 25px;
+  background-color: gray;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: lightgray;
+  color: black;
+}
+
+.main-button {
+  margin: 12px 0px 0px 25px;
+  background-color: #0191fe;
+  border-radius: 3px;
+  padding: 8px 13px 8px 13px;
+  color: $color;
+  border: 1px solid $color;
+  font-size: $secondary-font-size;
+}
+
+hr {
+  height: 1px;
+  background-color: lightgray;
+  border: none;
+  margin-left: 25px;
+  width: 375px;
+}
+
+.checkbox-p {
+  position: absolute;
+  margin: -20px 0px 0px 39px;
+  font-size: $secondary-font-size;
+}
+
+.footer-div {
+  @extend %flex-property;
+  color: $color;
+  padding-bottom: 30px;
+  top: 100px;
+}
+
+.footer-div p {
+  font-weight: $font-weight;
+  font-size: $secondary-font-size;
+}
+
+@media only screen and (max-width: 660px) {
+  .container br {
+    display: none;
+  }
+}
